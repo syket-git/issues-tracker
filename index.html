@@ -16,11 +16,11 @@
         <form id="issueInputForm">
           <div class="form-group">
             <label for="issueDescription">Description</label>
-            <input type="text" class="form-control" id="issueDescription" placeholder="Describe the issue ...">
+            <input type="text" required class="form-control" id="issueDescription" placeholder="Describe the issue ...">
           </div>
           <div class="form-group">
             <label for="issueSeverity">Severity</label>
-            <select id="issueSeverity" class="form-control">
+            <select id="issueSeverity" required class="form-control">
               <option value="Low">Low</option>
               <option value="Medium">Medium</option>
               <option value="High">High</option>
@@ -28,7 +28,7 @@
           </div>
           <div class="form-group">
             <label for="issueAssignedTo">Assigned To</label>
-            <input type="text" class="form-control" id="issueAssignedTo" placeholder="Enter responsible ...">
+            <input type="text" required class="form-control" id="issueAssignedTo" placeholder="Enter responsible ...">
           </div>
           <button type="submit" class="btn btn-primary">Add</button>
         </form>
