@@ -62,9 +62,9 @@ const fetchIssues = () => {
     issuesList.innerHTML +=   `<div class="well">
                               <h6>Issue ID: ${id} </h6>
                               <p><span class="label label-info"> ${status} </span></p>
-                              <h3> ${strike} </h3>
+                              <h3 class="strike"> ${strike} </h3>
                               <p><span class="glyphicon glyphicon-time"></span> ${severity}</p>
-                              <p><span class="glyphicon glyphicon-user"></span> ${assignedTo}</p>
+                              <p class="assignedTo"><span class="glyphicon glyphicon-user"></span> ${assignedTo}</p>
                               <a href="#" onclick="setStatusClosed(${id})" class="btn btn-warning">Close</a>
                               <a href="#" onclick="deleteIssue(${id})" class="btn btn-danger">Delete</a>
                               </div>`;
@@ -78,6 +78,8 @@ const fetchIssues = () => {
   const state = issues.filter(issue => issue.status === "Closed");
   const stateLength = state.length;
   document.getElementById("closeTotalIssue").innerHTML = stateLength;
+
+  document.getElementByClassName("well").style.color = "blue";
   
 
  
